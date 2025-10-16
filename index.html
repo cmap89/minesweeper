@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Minesweeper</title>
+</head>
+
+<body>
+
+    <main>
+        <h1 class="title">Minesweeper</h1>
+        <br>
+        <div class="game-controls">
+            <button class="reset-button" id="reset-button">New Game</button>
+            <div class="game-info">
+                <div class="mine-counter">
+                    <span class="mine-label">Mines:</span>
+                    <span class="mine-count" id="mine-count">0</span>
+                </div>
+                <div class="timer">
+                    <span class="timer-label">Time:</span>
+                    <span class="timer-display" id="timer-display">00:00</span>
+                </div>
+            </div>
+        </div>
+        <div class="grid-main">
+        </div>
+    </main>
+    <script src="./js/game.js"></script>
+    <!-- <script src="./js/App.js"></script> -->
+</body>
+
+</html>
