@@ -20,6 +20,7 @@ class Minesweeper {
         // UI elements
         this.mineCountDisplay = document.getElementById('mine-count');
         this.timerDisplay = document.getElementById('timer-display');
+        this.title = document.querySelector('.title');
         this.resetButton = document.getElementById('reset-button');
         this.resetButton?.addEventListener('click', () => this.restart());
 
@@ -278,6 +279,7 @@ class Minesweeper {
         this.isGameOver = true;
         this.stopTimer();
         
+
         if (!won) {
             // Reveal all mines
             this.squares.forEach(square => {
@@ -289,9 +291,10 @@ class Minesweeper {
                     square.textContent = '💣';
                 }
             });
-            console.log('Game Over - You hit a mine!');
+            this.title.innerHTML = `You hit a mine! Try Again`;
         } else {
-            console.log('Congratulations! You won!');
+            
+            this.title.innerHTML = `Congratulations! You won!`;
         }
     }
     
@@ -303,6 +306,7 @@ class Minesweeper {
     
     // Public method to restart the game
     restart() {
+        this.title.innerHTML = `Minesweeper`;
         this.isGameOver = false;
         this.stopTimer();
         this.init();
